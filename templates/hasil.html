@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+
+    <title>JIMBARA | Tes Depresi Kecemasan Stres</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    
+    <!-- font poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- css link -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    
+    <!-- header awal -->
+
+    <main class="main">
+        <header class="header">
+            <a href="/" class="logo">JIMBARA</a>
+
+            <nav class="navbar">
+                <a href="/">Beranda</a>
+                <a href="/test" class="aktif">Tes</a>
+                <a href="/about">Tentang</a>
+            </nav>
+
+            <div id="menu-btn" class="fa fa-bars"></div>
+        </header>
+
+        <section class="hasil" id="hasil">
+            <h2>Hasil Tes (DASS)-42</h2>
+                <p>Berikut hasil screening tingkat depresi, kecemasan dan stress kamu :</p>
+            <div class="hasil-table">
+                <div class="hasil-item">
+                    <h3>Depresi</h3>
+                    <p>Skor: {{ hasil['skor_depresi'] }}</p>
+                    <p>Interpretasi: {{ hasil['interpretasi_depresi'] }}</p>
+                </div>
+                
+                <div class="hasil-item">
+                    <h3>Kecemasan</h3>
+                    <p>Skor: {{ hasil['skor_kecemasan'] }}</p>
+                    <p>Interpretasi: {{ hasil['interpretasi_kecemasan'] }}</p>
+                </div>
+                
+                <div class="hasil-item">
+                    <h3>Stres</h3>
+                    <p>Skor: {{ hasil['skor_stres'] }}</p>
+                    <p>Interpretasi: {{ hasil['interpretasi_stres'] }}</p>
+                </div>
+                
+            </div>
+            <div class="peringatan-konsultasi">
+                <p><strong>Perhatian:</strong> Hasil prediksi yang diberikan oleh sistem kami bertujuan untuk memberikan gambaran umum mengenai kondisi kesehatan mental Anda. Namun, hasil ini tidak menggantikan diagnosis profesional. Kami sangat menganjurkan Anda untuk berkonsultasi dengan ahli kesehatan mental, seperti psikiater atau psikolog, untuk evaluasi lebih lanjut dan mendapatkan bantuan yang sesuai.</p>
+
+                <p>Anda merasa mengalami gejala yang mengkhawatirkan atau jika prediksi menunjukkan tingkat depresi, kecemasan, atau stres yang tinggi, segera cari bantuan profesional. Kesehatan mental Anda adalah prioritas utama, dan konsultasi dengan ahli adalah langkah penting untuk mendapatkan dukungan dan perawatan yang tepat.</p>
+            </div>
+            <div class="indikator-penilaian">
+                <h2>Indikator Penilaian Skor</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tingkat</th>
+                            <th>Depresi</th>
+                            <th>Kecemasan</th>
+                            <th>Stres</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Normal</td>
+                            <td>0-9</td>
+                            <td>0-7</td>
+                            <td>0-14</td>
+                        </tr>
+                        <tr>
+                            <td>Rendah</td>
+                            <td>10-13</td>
+                            <td>8-9</td>
+                            <td>15-18</td>
+                        </tr>
+                        <tr>
+                            <td>Sedang</td>
+                            <td>14-20</td>
+                            <td>10-14</td>
+                            <td>19-25</td>
+                        </tr>
+                        <tr>
+                            <td>Berat</td>
+                            <td>21-27</td>
+                            <td>15-19</td>
+                            <td>26-33</td>
+                        </tr>
+                        <tr>
+                            <td>Sangat Berat</td>
+                            <td>28+</td>
+                            <td>20+</td>
+                            <td>34+</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="referensi">
+                    <p>Lovibond, S.H. & Lovibond, P.F. (1995). Manual for the Depression Anxiety Stress Scales (2nd. Ed.). Sydney: Psychology Foundation.</p>
+                </div>
+            </div>
+            
+            <div class="btn-hasil">
+                <a href="/test" class="btn">Ulangi Tes</a>
+            </div>
+        </section>
+        
+        
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p>&copy; 2023 Hak Cipta Dilindungi. Dibuat oleh Rizqulloh Rifqi Edwanto.</p>
+            </div>
+        </footer
+    </body>
+</html>
