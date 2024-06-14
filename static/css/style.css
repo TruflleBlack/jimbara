@@ -774,12 +774,21 @@ section {
         background-color: var(--blue);
         color: white;
     }
+    
+    .hasil .hasil-table {
+        background-color: var(--light-blue);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Menyelaraskan item secara vertikal */
+        justify-content: center; /* Menyelaraskan item secara horizontal */
+        gap: 20px; 
+        width: 100%; /* Menetapkan lebar kotak agar sama */
+    }
+
     .hasil .hasil-item {
-        background-color: var(--light-blue); /* Mengubah warna latar belakang */
-        border: 1px solid var(--dark-blue); /* Mengubah ketebalan dan warna border */
-        border-radius: 8px; /* Mengubah radius border */
-        padding: 15px; /* Mengubah padding */
-        text-align: left; /* Mengubah alignment teks */
+        width: 100%; /* Menetapkan lebar kotak agar sama */
     }
 
     .hasil .hasil-item h3 {
@@ -797,9 +806,9 @@ section {
         background-color: var(--dark-blue); /* Mengubah warna latar belakang */
         color: white; /* Mengubah warna teks */
         border: none; /* Menghilangkan border */
-        padding: 10px 20px; /* Mengubah padding */
-        border-radius: 5px; /* Mengubah radius border */
-        font-size: 16px; /* Mengubah ukuran font */
+        padding: 8px 16px; /* Mengurangi padding */
+        border-radius: 4px; /* Mengurangi radius border */
+        font-size: 14px; /* Mengurangi ukuran font */
         cursor: pointer; /* Mengubah cursor menjadi pointer */
         transition: background-color 0.3s, color 0.3s; /* Menambahkan transisi untuk warna latar dan teks */
     }
