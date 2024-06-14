@@ -806,7 +806,7 @@ section {
         background-color: var(--dark-blue); /* Mengubah warna latar belakang */
         color: white; /* Mengubah warna teks */
         border: none; /* Menghilangkan border */
-        padding: 8px 16px; /* Mengurangi padding */
+        padding: 6px 12px; /* Mengurangi padding */
         border-radius: 4px; /* Mengurangi radius border */
         font-size: 14px; /* Mengurangi ukuran font */
         cursor: pointer; /* Mengubah cursor menjadi pointer */
