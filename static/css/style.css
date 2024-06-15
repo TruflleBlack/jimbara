@@ -123,6 +123,8 @@ section {
     font-weight: 600;
     cursor: pointer;
     transition: .5s;
+    margin-bottom: 70px;
+    box-sizing: border-box;
 }
 
 .mulai-btn:hover {
@@ -213,7 +215,7 @@ section {
     max-width: 750px;
     margin: 150px auto;
     padding: 20px;
-    background-color: #F8FAE5;
+    background-color: white;
     border-radius: 35px;
     box-shadow: 0 14px 28px rgb(21, 21, 21);
 }
@@ -251,7 +253,7 @@ section {
     padding: 15px 25px;
     font-size: 14px;
     color: #151515;
-    background-color: #F8FAE5;
+    background-color: white;
     border: var(--border);
     border-radius: 15px;
     cursor: pointer;
@@ -394,7 +396,7 @@ section {
 .peringatan-konsultasi {
     font-size: 16px;
     color: #151515;
-    background-color: #F8FAE5;
+    background-color: var(--light-color);
     padding: 15px;
     margin-top: 20px;
     text-align: justify;
@@ -552,6 +554,18 @@ section {
         color: var(--blue);
         margin: 2.5rem;
     }
+    .menu-btn {
+        display: block;
+        cursor: pointer;
+        font-size: 2.5rem;
+        color: var(--blue);
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1000;
+        margin-bottom: 70px;
+        box-sizing: border-box;
+    }
     .popup-info {
         position: absolute;
         top: 50%; left: 50%;
@@ -654,7 +668,7 @@ section {
         max-width: 365px;
         margin: 200px auto; /* Menjaga kontainer di tengah antara navbar dan footer */
         padding: 15px;
-        background-color: #F8FAE5;
+        background-color: white;
         border-radius: 25px;
         box-shadow: 0 8px 16px rgb(21, 21, 21);
         position: relative; /* Menambahkan posisi relatif untuk penyesuaian lebih lanjut jika diperlukan */
@@ -694,7 +708,7 @@ section {
         padding: 15px 25px;
         font-size: 12px;
         color: #151515;
-        background-color: #F8FAE5;
+        background-color: white;
         border: var(--border);
         border-radius: 15px;
         cursor: pointer;
@@ -748,6 +762,7 @@ section {
         color: white;
         padding: 15px;
         border-radius: 5px;
+        background-color: var(--light-color);
     }
 
     .hasil .peringatan-konsultasi strong {
@@ -813,6 +828,12 @@ section {
         font-size: 16px; /* Mengubah ukuran font */
     }
 
+    .hasil .referensi {
+        font-size: 12px; /* Mengatur ukuran font menjadi lebih kecil */
+        color: #666; /* Mengatur warna teks menjadi lebih gelap */
+        text-align: center; /* Menyelaraskan teks ke tengah */
+        margin-top: 20px; /* Menambahkan margin atas */
+    }
 
     .btn-hasil {
         background-color: var(--dark-blue); /* Mengubah warna latar belakang */
@@ -894,3 +915,5 @@ section {
         font-size: 50%;
     }
 }
+
+
