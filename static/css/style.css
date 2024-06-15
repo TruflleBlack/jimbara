@@ -665,13 +665,17 @@ section {
     }
     
     .question-container {
-        max-width: 365px;
-        margin: 200px auto; /* Menjaga kontainer di tengah antara navbar dan footer */
+        max-width: 365px; /* Memperlebar kontainer */
+        width: 100%; /* Menjaga lebar kontainer agar tidak menyusut */
+        margin: 0 auto; /* Menjaga kontainer di tengah secara vertikal dan horizontal */
         padding: 15px;
         background-color: white;
         border-radius: 25px;
         box-shadow: 0 8px 16px rgb(21, 21, 21);
-        position: relative; /* Menambahkan posisi relatif untuk penyesuaian lebih lanjut jika diperlukan */
+        position: absolute; /* Mengubah posisi menjadi absolut untuk penyesuaian tengah */
+        top: 50%; /* Menempatkan kontainer di tengah secara vertikal */
+        left: 50%; /* Menempatkan kontainer di tengah secara horizontal */
+        transform: translate(-50%, -50%); /* Mengoreksi posisi agar tepat di tengah */
     }
 
     .question-container .question {
@@ -701,7 +705,7 @@ section {
     .question-container .options {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 15px;
     }
 
     .question-container .options button {
@@ -883,7 +887,7 @@ section {
         background-color: white; /* Mengubah warna latar belakang kartu */
         border-radius: 8px; /* Mengubah radius border kartu */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada kartu */
-        padding: 15px; /* Mengubah padding kartu */
+        padding: 10px; /* Mengubah padding kartu */
         width: 250px; /* Mengatur lebar kartu */
     }
     .team .card-info {
@@ -915,5 +919,3 @@ section {
         font-size: 50%;
     }
 }
-
-
