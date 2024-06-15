@@ -428,6 +428,7 @@ section {
 .team .container {
     padding: 20px;
     background-color: var(--light-color);
+    margin-bottom: 100px; /* Menambahkan margin bawah untuk mencegah terpotong oleh footer */
 }
 
 .team .card {
