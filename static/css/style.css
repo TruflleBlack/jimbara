@@ -209,12 +209,13 @@ section {
 }
 
 .question-container {
-    max-width: 900px;
+    margin-top: 20px; /* Mengurangi jarak dengan navbar */
+    max-width: 750px;
     margin: 150px auto;
     padding: 20px;
-    background-color: #f8f9fa;
+    background-color: #F8FAE5;
     border-radius: 35px;
-    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    box-shadow: 0 14px 28px rgb(21, 21, 21);
 }
 .question-container .question {
     display: none;
@@ -235,7 +236,7 @@ section {
 }
 
 .question-container .question h2 {
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
     margin-bottom: 30px;
 }
@@ -247,25 +248,25 @@ section {
 }
 
 .question-container .options button {
-    padding: 10px 20px;
+    padding: 15px 25px;
     font-size: 14px;
-    color: white;
-    background-color: var(--blue);
-    border: none;
-    border-radius: 5px;
+    color: #151515;
+    background-color: #F8FAE5;
+    border: var(--border);
+    border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .question-container .options button:hover {
-    background-color: var(--dark-blue);
+    background-color: #EEEEEE;
     color: var(--blue);
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 10px 20px rgb(21, 21, 21)
 }
 
 .question-container .options .option.selected {
-    background-color: var(--dark-blue);
-    color: var(--blue);
+    background-color: var(--blue);
+    color: #F8FAE5;
 }
 
 .question-container .navigation {
@@ -293,10 +294,12 @@ section {
     border-radius: 10px;
     padding: 20px;
     text-align: center;
+    line-height: 1.2;
 }
 
 .hasil .hasil-table .hasil-item h3 {
     color: var(--blue);
+    font-size: 20px;
     margin-bottom: 12px;
 }
 
@@ -371,6 +374,8 @@ section {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-bottom: 70px;
+    box-sizing: border-box;
 }
 
 .hasil .btn-hasil .btn:hover {
@@ -388,10 +393,9 @@ section {
 
 .peringatan-konsultasi {
     font-size: 16px;
-    color: #C80036;
-    background-color: var(--light-color);
+    color: #151515;
+    background-color: #F8FAE5;
     padding: 15px;
-    border-left: 5px solid #FF0000;
     margin-top: 20px;
     text-align: justify;
 }
@@ -645,13 +649,15 @@ section {
         background: #fff;
         color: var(--blue);
     }
+    
     .question-container {
-        max-width: 900px;
-        margin: 150px auto;
-        padding: 20px;
-        background-color: #f8f9fa;
-        border-radius: 35px;
-        box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        max-width: 365px;
+        margin: 200px auto; /* Menjaga kontainer di tengah antara navbar dan footer */
+        padding: 15px;
+        background-color: #F8FAE5;
+        border-radius: 25px;
+        box-shadow: 0 8px 16px rgb(21, 21, 21);
+        position: relative; /* Menambahkan posisi relatif untuk penyesuaian lebih lanjut jika diperlukan */
     }
 
     .question-container .question {
@@ -673,7 +679,7 @@ section {
     }
 
     .question-container .question h2 {
-        font-size: 18px;
+        font-size: 14px;
         color: #333;
         margin-bottom: 30px;
     }
@@ -685,25 +691,25 @@ section {
     }
 
     .question-container .options button {
-        padding: 10px 20px;
-        font-size: 14px;
-        color: white;
-        background-color: var(--blue);
-        border: none;
-        border-radius: 5px;
+        padding: 15px 25px;
+        font-size: 12px;
+        color: #151515;
+        background-color: #F8FAE5;
+        border: var(--border);
+        border-radius: 15px;
         cursor: pointer;
         transition: background-color 0.3s ease;
     }
 
     .question-container .options button:hover {
-        background-color: var(--dark-blue);
+        background-color: #EEEEEE;
         color: var(--blue);
         box-shadow: var(--box-shadow);
     }
 
     .question-container .options .option.selected {
-        background-color: var(--dark-blue);
-        color: var(--blue);
+        background-color: var(--blue);
+        color: #F8FAE5;
     }
 
     .question-container .navigation {
@@ -722,6 +728,7 @@ section {
         background-color: var(--light-gray);
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        overflow: auto;
     }
 
     .hasil h2 {
@@ -738,7 +745,6 @@ section {
 
     .hasil .peringatan-konsultasi {
         margin-top: 20px;
-        background-color: var(--warning-red);
         color: white;
         padding: 15px;
         border-radius: 5px;
@@ -746,6 +752,10 @@ section {
 
     .hasil .peringatan-konsultasi strong {
         font-weight: bold;
+    }
+    .hasil .peringatan-konsultasi p {
+        font-size: 14px; /* Mengubah ukuran font menjadi lebih kecil */
+        text-align: justify; /* Membuat tulisan merata */
     }
 
     .hasil .indikator-penilaian {
@@ -788,7 +798,8 @@ section {
     }
 
     .hasil .hasil-item {
-        width: 100%; /* Menetapkan lebar kotak agar sama */
+        width: 100%;
+        line-height: 1.2; /* Menetapkan lebar kotak agar sama */
     }
 
     .hasil .hasil-item h3 {
@@ -802,15 +813,18 @@ section {
         font-size: 16px; /* Mengubah ukuran font */
     }
 
+
     .btn-hasil {
         background-color: var(--dark-blue); /* Mengubah warna latar belakang */
         color: white; /* Mengubah warna teks */
         border: none; /* Menghilangkan border */
-        padding: 6px 12px; /* Mengurangi padding */
+        padding: 8px 16px; /* Mengurangi padding */
         border-radius: 4px; /* Mengurangi radius border */
         font-size: 14px; /* Mengurangi ukuran font */
         cursor: pointer; /* Mengubah cursor menjadi pointer */
+        margin-bottom: 70px;
         transition: background-color 0.3s, color 0.3s; /* Menambahkan transisi untuk warna latar dan teks */
+        box-sizing: border-box; /* Menambahkan box-sizing untuk memastikan padding dan border termasuk dalam lebar total */
     }
 
     .btn-hasil:hover {
@@ -863,6 +877,16 @@ section {
         font-size: 14px; /* Mengubah ukuran font paragraf dalam kartu */
         line-height: 1.5; /* Mengubah line height paragraf dalam kartu */
     }
+    footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: var(--dark-blue);
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+    }
 }
 
 @media (max-width:450px) {
@@ -870,5 +894,3 @@ section {
         font-size: 50%;
     }
 }
-
-
