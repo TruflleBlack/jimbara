@@ -211,13 +211,17 @@ section {
 }
 
 .question-container {
-    margin-top: 20px; /* Mengurangi jarak dengan navbar */
     max-width: 750px;
-    margin: 150px auto;
+    width: 100%; /* Menjaga lebar kontainer agar tidak menyusut */
+    margin: 0px auto;
     padding: 20px;
     background-color: white;
     border-radius: 35px;
     box-shadow: 0 14px 28px rgb(21, 21, 21);
+    position: absolute; /* Mengubah posisi menjadi absolut untuk penyesuaian tengah */
+    top: 50%; /* Menempatkan kontainer di tengah secara vertikal */
+    left: 50%; /* Menempatkan kontainer di tengah secara horizontal */
+    transform: translate(-50%, -50%); /* Mengoreksi posisi agar tepat di tengah */
 }
 .question-container .question {
     display: none;
@@ -246,7 +250,7 @@ section {
 .question-container .options {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
 }
 
 .question-container .options button {
@@ -445,13 +449,17 @@ section {
     line-height: 1.5;
 }
 
-
 .site-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-color: var(--blue);
     color: white;
     text-align: center;
     padding: 10px 20px;
     width: 100%;
+    z-index: 1000; /* Pastikan footer berada di atas elemen lain */
 }
 
 .site-footer .container {
@@ -665,7 +673,7 @@ section {
     }
     
     .question-container {
-        max-width: 365px; /* Memperlebar kontainer */
+        max-width: 345px; /* Memperlebar kontainer */
         width: 100%; /* Menjaga lebar kontainer agar tidak menyusut */
         margin: 0 auto; /* Menjaga kontainer di tengah secara vertikal dan horizontal */
         padding: 15px;
@@ -705,7 +713,7 @@ section {
     .question-container .options {
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
     }
 
     .question-container .options button {
@@ -919,3 +927,5 @@ section {
         font-size: 50%;
     }
 }
+
+
