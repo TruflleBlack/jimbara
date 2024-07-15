@@ -5,9 +5,9 @@ import pickle
 
 app = Flask(__name__)
 # Load the models
-ax_model = pickle.load(open("ax_svm_model.pkl", "rb"))
-dp_model = pickle.load(open("dp_svm_model.pkl", "rb"))
-st_model = pickle.load(open("st_svm_model.pkl", "rb"))
+ax_model = pickle.load(open("kecemasan_model.pkl", "rb"))
+dp_model = pickle.load(open("depresi_model.pkl", "rb"))
+st_model = pickle.load(open("stres_model.pkl", "rb"))
 
 @app.route('/', endpoint='home')
 def home():
