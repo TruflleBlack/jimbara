@@ -166,6 +166,17 @@ section {
     margin: 4px 0;
 }
 
+.popup-info .age-warning {
+    color: #fff; /* Warna teks putih */
+    background-color: #ff6347; /* Warna latar belakang merah tomat */
+    font-weight: bold;
+    padding: 10px 20px; /* Padding untuk membuat teks tidak terlalu dekat dengan border */
+    border-radius: 8px; /* Border radius untuk membuat tepi melengkung */
+    margin-top: 10px; /* Jarak atas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan untuk menambah kedalaman */
+    text-align: center; /* Teks rata tengah */
+}
+
 .popup-info .btn-group {
     display: flex;
     justify-content: space-between;
@@ -608,17 +619,6 @@ section {
         font-weight: 500;
         margin: 4px 0;
     }
-
-    .popup-info .age-warning {
-    color: #fff; /* Warna teks putih */
-    background-color: #ff6347; /* Warna latar belakang merah tomat */
-    font-weight: bold;
-    padding: 10px 20px; /* Padding untuk membuat teks tidak terlalu dekat dengan border */
-    border-radius: 8px; /* Border radius untuk membuat tepi melengkung */
-    margin-top: 10px; /* Jarak atas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan untuk menambah kedalaman */
-    text-align: center; /* Teks rata tengah */
-}
 
     .popup-info .btn-group {
         display: flex;
