@@ -330,7 +330,7 @@ section {
     padding: 2rem 9%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 100px;
 }
 
@@ -346,6 +346,98 @@ section {
     color: #666;
     margin-bottom: 20px;
     text-align: left;
+}
+
+.hasil .hasil {
+    padding: 2rem 9%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 100px;
+}
+
+.hasil h2 {
+    font-size: 20px;
+    color: var(--blue);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.hasil p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.hasil .user-profile {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 25px;
+    max-width: 500px;
+    width: 100%;
+    align-self: flex-start;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: var(--blue);
+}
+
+.profile-header i {
+    font-size: 2.2rem;
+    margin-right: 15px;
+}
+
+.profile-header h3 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.info-label i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.info-value {
+    color: #333;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+/* Animasi hover */
+.info-item:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+    transition: background-color 0.3s ease;
 }
 
 .indikator-penilaian h2 {
@@ -377,28 +469,6 @@ section {
     background-color: var(--light-color);
     color: #333;
 }
-
-.hasil .btn-hasil {
-    margin-top: 30px;
-    margin-bottom: 100px;
-}
-
-.hasil .btn-hasil .btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: var(--blue);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-bottom: 70px;
-    box-sizing: border-box;
-}
-
-.hasil .btn-hasil .btn:hover {
-    background-color: var(--dark-blue);
-}
 .referensi {
     font-size: 14px;
     color: var(--dark-gray);
@@ -416,6 +486,82 @@ section {
     padding: 15px;
     margin-top: 20px;
     text-align: justify;
+}
+
+.terima-kasih {
+    background-color: var(--light-color);
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.terima-kasih-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.terima-kasih i {
+    font-size: 4rem;
+    color: var(--blue);
+    margin-bottom: 1rem;
+    animation: pulse 2s infinite;
+}
+
+.terima-kasih h2 {
+    font-size: 2.5rem;
+    color: var(--blue);
+    margin-bottom: 1.5rem;
+}
+
+.terima-kasih p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--blue);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: var(--blue);
+    border: 2px solid var(--blue);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .tentang {
@@ -933,6 +1079,46 @@ section {
         text-align: center;
         padding: 10px 0;
     }
+    .hasil {
+        padding: 2rem 5%;
+    }
+
+    .user-profile {
+        padding: 15px;
+    }
+
+    .profile-header i {
+        font-size: 2rem;
+    }
+
+    .profile-header h3 {
+        font-size: 1.6rem;
+    }
+
+    .info-label, .info-value {
+        font-size: 1.2rem;
+    }
+
+    .terima-kasih {
+        padding: 3rem 1.5rem;
+    }
+
+    .terima-kasih h2 {
+        font-size: 2rem;
+    }
+
+    .terima-kasih p {
+        font-size: 1rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
 }
 
 @media (max-width:450px) {
@@ -940,5 +1126,3 @@ section {
         font-size: 50%;
     }
 }
-
-
