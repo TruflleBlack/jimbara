@@ -35,116 +35,118 @@
 
             <div id="menu-btn" class="fa fa-bars"></div>
         </header>
+    </main>
 
-        <section class="hasil" id="hasil">
-            <h2>Hasil Tes (DASS)-42</h2>
-            <p>Berikut hasil screening tingkat depresi, kecemasan dan stress kamu :</p>
-            <<div class="user-profile">
-                <div class="profile-header">
-                    <i class="fas fa-user-circle"></i>
-                    <h3>Profil Pengguna</h3>
+    <section class="hasil" id="hasil">
+        <h1 class="hasil-title">Hasil Tes (DASS)-42</h1>
+        <p class="hasil-description">
+            Berikut adalah hasil tes Depression Anxiety Stress Scale (DASS)-42 Anda. 
+            Hasil ini memberikan gambaran umum tentang tingkat depresi, kecemasan, dan stres yang Anda alami. 
+            Ingat, hasil ini bukan diagnosis klinis dan sebaiknya dikonsultasikan dengan profesional kesehatan mental.
+        </p>
+        <div class="user-profile">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <i class="fas fa-user"></i>
                 </div>
-                <div class="profile-info">
-                    <div class="info-item">
-                        <span class="info-label"><i class="fas fa-id-card"></i> Nama</span>
-                        <span class="info-value">{{ user_data.nama }}</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label"><i class="fas fa-birthday-cake"></i> Usia</span>
-                        <span class="info-value">{{ user_data.usia }} tahun</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label"><i class="fas fa-venus-mars"></i> Jenis Kelamin</span>
-                        <span class="info-value">{{ user_data.jenis_kelamin }}</span>
-                    </div>
+                <h3>Profil Pengguna</h3>
+            </div>
+            <div class="profile-info">
+                <div class="info-item">
+                    <span class="info-label"><i class="fas fa-id-card"></i> Nama</span>
+                    <span class="info-value">{{ user_data.nama }}</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label"><i class="fas fa-birthday-cake"></i> Usia</span>
+                    <span class="info-value">{{ user_data.usia }} tahun</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label"><i class="fas fa-venus-mars"></i> Jenis Kelamin</span>
+                    <span class="info-value">{{ user_data.jenis_kelamin }}</span>
                 </div>
             </div>
-            <div class="hasil-table">
-                <div class="hasil-item">
-                    <h3>Depresi</h3>
-                    <p>Skor: {{ hasil['skor_depresi'] }} ({{ hasil['interpretasi_depresi'] }}) </p>
-                </div>
-                
-                <div class="hasil-item">
-                    <h3>Kecemasan</h3>
-                    <p>Skor: {{ hasil['skor_kecemasan'] }} ({{ hasil['interpretasi_kecemasan'] }}) </p>
-                </div>
-                
-                <div class="hasil-item">
-                    <h3>Stres</h3>
-                    <p>Skor: {{ hasil['skor_stres'] }} ({{ hasil['interpretasi_stres'] }}) </p>
-                </div>
-                
+        </div>
+        <div class="hasil-table">
+            <div class="hasil-item">
+                <h3>Depresi</h3>
+                <p>Skor: {{ hasil['skor_depresi'] }} ({{ hasil['interpretasi_depresi'] }}) </p>
             </div>
-            <div class="peringatan-konsultasi">
-                <p><strong>Perhatian:</strong> Hasil prediksi yang diberikan oleh sistem kami bertujuan untuk memberikan gambaran umum mengenai kondisi kesehatan mental kamu. Namun, hasil ini tidak menggantikan diagnosis profesional. Kami sangat menganjurkan kamu untuk berkonsultasi dengan ahli kesehatan mental, seperti psikiater atau psikolog, untuk evaluasi lebih lanjut dan mendapatkan bantuan yang sesuai.</p>
+            
+            <div class="hasil-item">
+                <h3>Kecemasan</h3>
+                <p>Skor: {{ hasil['skor_kecemasan'] }} ({{ hasil['interpretasi_kecemasan'] }}) </p>
+            </div>
+            
+            <div class="hasil-item">
+                <h3>Stres</h3>
+                <p>Skor: {{ hasil['skor_stres'] }} ({{ hasil['interpretasi_stres'] }}) </p>
+            </div>
+            
+        </div>
+        <div class="indikator-penilaian">
+            <h2>Indikator Penilaian Skor</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tingkat</th>
+                        <th>Depresi</th>
+                        <th>Kecemasan</th>
+                        <th>Stres</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Normal</td>
+                        <td>0-9</td>
+                        <td>0-7</td>
+                        <td>0-14</td>
+                    </tr>
+                    <tr>
+                        <td>Rendah</td>
+                        <td>10-13</td>
+                        <td>8-9</td>
+                        <td>15-18</td>
+                    </tr>
+                    <tr>
+                        <td>Sedang</td>
+                        <td>14-20</td>
+                        <td>10-14</td>
+                        <td>19-25</td>
+                    </tr>
+                    <tr>
+                        <td>Berat</td>
+                        <td>21-27</td>
+                        <td>15-19</td>
+                        <td>26-33</td>
+                    </tr>
+                    <tr>
+                        <td>Sangat Berat</td>
+                        <td>28+</td>
+                        <td>20+</td>
+                        <td>34+</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="referensi">
+                <p>Sumber: <a href="https://www.denpasarmentalhealthcentre.my.id/psikotes-dass">Denpasar Mental Health Centre</a></p>
+            </div>
+        </div>
+    </section>
 
-                <p>Kamu merasa mengalami gejala yang mengkhawatirkan atau jika prediksi menunjukkan tingkat depresi, kecemasan, atau stres yang tinggi, segera cari bantuan profesional. Kesehatan mental kamu adalah prioritas utama, dan konsultasi dengan ahli adalah langkah penting untuk mendapatkan dukungan dan perawatan yang tepat.</p>
+    <section class="terima-kasih">
+        <div class="terima-kasih-content">
+            <i class="fas fa-heart"></i>
+            <h2>Terima Kasih!</h2>
+            <p>Terima kasih telah menggunakan layanan kami untuk melakukan screening kesehatan mental. Ingat, hasil ini tidak menggantikan diagnosis profesional. Jika Anda memiliki kekhawatiran tentang kesehatan mental Anda, kami sangat menganjurkan untuk berkonsultasi dengan ahli kesehatan mental.</p>
+            <div class="action-buttons">
+                <a href="/" class="btnn btnn-primary">Kembali ke Beranda</a>
+                <a href="/form" class="btnn btnn-secondary">Ulangi Tes</a>
             </div>
-            <div class="indikator-penilaian">
-                <h2>Indikator Penilaian Skor</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Tingkat</th>
-                            <th>Depresi</th>
-                            <th>Kecemasan</th>
-                            <th>Stres</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Normal</td>
-                            <td>0-9</td>
-                            <td>0-7</td>
-                            <td>0-14</td>
-                        </tr>
-                        <tr>
-                            <td>Rendah</td>
-                            <td>10-13</td>
-                            <td>8-9</td>
-                            <td>15-18</td>
-                        </tr>
-                        <tr>
-                            <td>Sedang</td>
-                            <td>14-20</td>
-                            <td>10-14</td>
-                            <td>19-25</td>
-                        </tr>
-                        <tr>
-                            <td>Berat</td>
-                            <td>21-27</td>
-                            <td>15-19</td>
-                            <td>26-33</td>
-                        </tr>
-                        <tr>
-                            <td>Sangat Berat</td>
-                            <td>28+</td>
-                            <td>20+</td>
-                            <td>34+</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="referensi">
-                    <p><a href="https://www.denpasarmentalhealthcentre.my.id/psikotes-dass">Denpasar Mental Health Centre</a>.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="terima-kasih">
-            <div class="terima-kasih-content">
-                <i class="fas fa-heart"></i>
-                <h2>Terima Kasih!</h2>
-                <p>Terima kasih telah menggunakan layanan kami untuk melakukan screening kesehatan mental. Ingat, hasil ini tidak menggantikan diagnosis profesional. Jika Anda memiliki kekhawatiran tentang kesehatan mental Anda, kami sangat menganjurkan untuk berkonsultasi dengan ahli kesehatan mental.</p>
-                <div class="action-buttons">
-                    <a href="/" class="btn btn-primary">Kembali ke Beranda</a>
-                    <a href="/form" class="btn btn-secondary">Ulangi Tes</a>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
         
         
-        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
     </body>
 </html>
