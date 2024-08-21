@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+
+    <title>JIMBARA | Tes Depresi Kecemasan Stres</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    
+    <!-- font poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- css link -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    
+    <!-- header awal -->
+
+    <main class="main">
+        <header class="header">
+            <a href="/" class="logo">JIMBARA</a>
+
+            <nav class="navbar">
+                <a href="/">Beranda</a>
+                <a href="/form">Tes</a>
+                <a href="/about" class="aktif">Tentang</a>
+            </nav>
+
+            <div id="menu-btn" class="fa fa-bars"></div>
+        </header>
+    
+    <!-- header akhir -->
+    </main>
+
+    <section class="tentang" id="tentang">
+        <div class="container">
+            <h2>Tentang JIMBARA</h2>
+            <p>JIMBARA adalah kepanjangan dari Jiwamu Berharga, JIMBARA ini suatu sistem yang dirancang untuk membantu individu dalam mengidentifikasi tingkat depresi, kecemasan, dan stres melalui serangkaian tes psikologis. Tujuan dari sistem ini adalah untuk memberikan skrining awal yang dapat membantu pengguna dalam memahami kondisi kesehatan mental mereka dan mendorong mereka untuk mencari bantuan profesional jika diperlukan.</p>
+        </div>
+    </section>
+
+    <section class="team">
+        <div class="container">
+            <h2>Profil Pengembang</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-info">
+                        <h3>Mahasiswa</h3>
+                        <p>Nama    : Rizqulloh Rifqi Edwanto</p>
+                        <p>NIM     : 195410188</p>
+                        <p>Jurusan : Informatika</p>
+                        <p>Email   : rizqullohr93@gmail.com</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <h3>Dosen Pembimbing</h3>
+                        <p>Nama    : Dini Fakta Sari, S.T., M.T</p>
+                        <p>Email   : dini@utdi.ac.id</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <h3>Psikolog</h3>
+                        <p>Nama    : Dr. I Putu Belly Sutrisna, M.Biomed, SpKJ, S.Kom</p>
+                        <p>Email   : belly_sutrisna@hotmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- js link -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Hak Cipta Dilindungi. Dibuat oleh Rizqulloh Rifqi Edwanto.</p>
+        </div>
+    </footer
+</body>
+
+</html>

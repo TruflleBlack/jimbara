@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+
+    <title>JIMBARA | Tes Depresi Kecemasan Stres</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    
+    <!-- font poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- css link -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    
+    <!-- header awal -->
+
+    <main class="main">
+        <header class="header">
+            <a href="/" class="logo">JIMBARA</a>
+
+            <nav class="navbar">
+                <a href="/" class="aktif">Beranda</a>
+                <a href="/form">Tes</a>
+                <a href="/about">Tentang</a>
+            </nav>
+
+            <div id="menu-btn" class="fa fa-bars"></div>
+        </header>
+    
+
+    <!-- header akhir -->
+
+    <!-- home section awal -->
+    <section class="beranda" id="beranda">
+        <div class="image">
+            <img src="https://i.ibb.co.com/fDqpdSK/img1.png" alt="Gambar Utama">
+        </div>
+
+        <div class="content">
+            <h2>Tes Skala Depresi Kecemasan dan Stres (DASS)-42</h2>
+            <p>Tes Skala ini bertujuan untuk melakukan skrining awal dan mengetahui tingkat depresi, kecemasan dan stress berdasarkan gejala-gejala yang yang kamu alami dalam 1 minggu trakhir ini. Hasilnya akan sangat berguna untuk memahami kondisi kesehatan mentalmu saat ini.</p>
+            <button class="mulai-btn">Mulai</button>
+        </div>
+    </section>
+</main>
+    <!-- home section akhir -->
+
+    <div class="popup-info">
+        <h2>Yuk baca panduan pengisiannya terlebih dulu!</h2>
+        <span class="info">1. Tes ini tidak ada jawaban salah maupun benar, isilah dengan keadaanmu 1 minggu terakhir ini.</span>
+        <span class="info">2. Tenang aja tes ini tidak diberi waktu pengerjaan, jadi santai saja untuk mengerjakannya.</span>
+        <span class="info">3. Cari tempat yang nyaman dan kondusif agar kamu lebih fokus.</span>
+        <span class="info">4. Jika kamu keluar di tengah tes, maka seluruh proses tes dan jawaban akan hilang.</span>
+        <span class="info">5. Hasil tes bisa kamu dapatkan setelah mengisi semua pertanyaan dalam lengkap.</span>
+        <span class="info age-warning">Perhatian: Skala ini dikhususkan untuk pengguna di atas 18 tahun.</span>
+
+        <div class="btn-group">
+            <button class="info-btn exit-btn" type="button">Batal</button>
+            <a href="/form" class="info-btn lanjut-btn">Lanjut</a>
+        </div>
+    </div>
+
+
+    <!-- js link -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Hak Cipta Dilindungi. Dibuat oleh Rizqulloh Rifqi Edwanto.</p>
+        </div>
+    </footer
+</body>
+
+</html>
