@@ -1,9 +1,10 @@
 import numpy as np
 import pandas as pd
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for, session
 import pickle
 
 app = Flask(__name__)
+app.secret_key = 'kunci_rahasia_anda'  # Ganti dengan kunci rahasia yang aman
 # Load the models
 ax_model = pickle.load(open("kecemasan_model.pkl", "rb"))
 dp_model = pickle.load(open("depresi_model.pkl", "rb"))
@@ -13,8 +14,26 @@ st_model = pickle.load(open("stres_model.pkl", "rb"))
 def home():
     return render_template('index.html')
 
-@app.route('/test', methods=['GET'], endpoint='test')
+@app.route('/form', methods=['GET', 'POST'])
+def form():
+    if request.method == 'POST':
+        session['user_data'] = {
+            'nama': request.form['nama'],
+            'usia': request.form['usia'],
+            'jenis_kelamin': request.form['jenis_kelamin']
+        }
+        # Arahkan ke halaman test
+        return redirect(url_for('test'))
+    return render_template('form.html')
+
+@app.route('/test', methods=['GET', 'POST'])
 def test():
+    # Periksa apakah data pengguna tersedia
+    user_data = session.get('user_data')
+    if not user_data:
+        # Jika tidak ada data, arahkan kembali ke form
+        return redirect(url_for('form'))
+
     questions = {
     'DASS1': 'Menjadi marah karena hal-hal sepele',
     'DASS2': 'Mulut terasa kering.',
@@ -59,8 +78,7 @@ def test():
     'DASS41': 'Gemetar',
     'DASS42': 'Merasa sulit meningkatkan inisiatif dalam melakukan sesuatu.'
 }
-    return render_template('test.html', questions=questions, range_i=range(1, 43))
-
+    return render_template('test.html', questions=questions, range_i=range(1, 43), user_data=user_data)
 
 @app.route('/submit', methods=['POST'])
 def submit():
@@ -145,13 +163,16 @@ def submit():
         'interpretasi_stres': st_interpretation
     }
 
-
-    return render_template('hasil.html', hasil=results)
+    user_data = session.get('user_data', {})
+    print("User data from session:", user_data)  # Debugging
+    print("Rendering template with user_data:", user_data)  # Debugging
+    return render_template('hasil.html', hasil=results, user_data=user_data)
 
 
 @app.route('/about')
 def about():
     return render_template('about.html')
+
 
 if __name__ == '__main__':
 	app.run(debug=True)
