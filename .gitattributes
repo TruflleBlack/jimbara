@@ -1,0 +1,13 @@
+# Menyertakan file Python
+app.py linguist-language=Python
+
+# Menyertakan file JavaScript
+script.js linguist-language=JavaScript
+test.js linguist-language=JavaScript
+
+# Menyertakan file HTML
+about.html linguist-language=HTML
+form.html linguist-language=HTML
+hasil.html linguist-language=HTML
+index.html linguist-language=HTML
+test.html linguist-language=HTML
