@@ -28,3 +28,4 @@ tornado==6.4.1
 trove_classifiers==2024.10.21.16
 urllib3_secure_extra==0.1.0
 xmlrpclib==1.0.1
+Cython>=0.29.21
