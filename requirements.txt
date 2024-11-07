@@ -45,6 +45,7 @@ referencing==0.35.1
 requests==2.32.3
 rpds-py==0.21.0
 six==1.16.0
+scikit-learn>=0.24.0
 soupsieve==2.6
 stack-data==0.6.3
 tinycss2==1.4.0
