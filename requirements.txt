@@ -11,6 +11,7 @@ defusedxml==0.7.1
 docopt==0.6.2
 executing==2.1.0
 fastjsonschema==2.20.0
+Flask>=2.0.0
 idna==3.10
 ipython==8.12.3
 jedi==0.19.1
