@@ -2,7 +2,7 @@ attr==0.3.2
 ConfigParser==7.1.0
 contextlib2==21.6.0
 cryptography==43.0.3
-Cython==3.0.11
+Cython>=0.29.21
 dl==0.1.0
 docutils==0.21.2
 filelock==3.16.1
@@ -28,4 +28,3 @@ tornado==6.4.1
 trove_classifiers==2024.10.21.16
 urllib3_secure_extra==0.1.0
 xmlrpclib==1.0.1
-Cython>=0.29.21
