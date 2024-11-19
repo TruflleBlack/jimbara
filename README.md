@@ -1,10 +1,10 @@
 # Nama Proyek Anda
 
-Selamat datang di proyek **Nama Proyek Anda**! 🎉
+Selamat datang di proyek **Jimbara | Web Skrining Awal Depresi, Kecemasan, dan Stres**! 🎉
 
 ## Deskripsi
 
-Proyek ini adalah [deskripsi singkat tentang apa yang dilakukan proyek Anda]. Tujuan dari proyek ini adalah untuk [tujuan proyek]. 
+Proyek skrining mental ini bertujuan membantu individu mengidentifikasi gejala awal depresi, kecemasan, dan stres melalui platform online yang mudah diakses. 
 
 ## Screenshot
 
